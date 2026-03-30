@@ -101,21 +101,21 @@
     keymap {
         compatible = "zmk,keymap";
 
-        def {
+        base {
             bindings = <
-&kp TAB    &kp Q  &kp W             &kp E            &kp R         &kp T          &kp Y        &kp U         &kp I            &kp O              &kp P          &kp BACKSPACE
-&kp ESC    &kp A  &HML LEFT_ALT S   &HML LEFT_GUI D  &HML LCTRL F  &kp G          &kp H        &HMR LCTRL J  &HMR LEFT_GUI K  &HMR RIGHT_ALT L   &kp SEMICOLON  &kp SQT
-&kp LSHFT  &kp Z  &kp X             &kp C            &kp V         &kp B          &kp N        &kp M         &kp COMMA        &kp DOT            &kp FSLH       &kp RIGHT_SHIFT
-                  &kp LEFT_BRACKET  &kp LGUI         &lt 1 TAB     &lt 2 SPACE    &lt 3 SPACE  &lt 4 ENTER   &kp RALT         &kp RIGHT_BRACKET
+&kp TAB    &kp Q                &kp W             &kp E            &kp R                   &kp T          &kp Y        &kp U                    &kp I             &kp O              &kp P                        &kp BACKSPACE
+&kp ESC    &HML LEFT_CONTROL A  &HML LEFT_ALT S   &HML LEFT_GUI D  &HMShiftL LEFT_SHIFT F  &kp G          &kp H        &HMShiftR RIGHT_SHIFT J  &HMR LEFT_GUI K   &HMR RIGHT_ALT L   &HMR LEFT_CONTROL SEMICOLON  &kp SQT
+&kp LSHFT  &kp Z                &kp X             &kp C            &kp V                   &kp B          &kp N        &kp M                    &kp COMMA         &kp DOT            &kp FSLH                     &kp RIGHT_SHIFT
+                                &kp LEFT_BRACKET  &kp BACKSPACE    &lt 1 TAB               &lt 2 SPACE    &lt 3 SPACE  &lt 4 ENTER              &kp LEFT_COMMAND  &kp RIGHT_BRACKET
             >;
         };
 
         nav {
             bindings = <
-&trans  &trans        &trans        &trans     &trans          &trans    &trans    &trans         &trans     &trans     &trans  &trans
-&trans  &kp LEFT_WIN  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &trans    &kp LEFT  &kp DOWN       &kp UP     &kp RIGHT  &trans  &trans
-&trans  &trans        &trans        &trans     &trans          &trans    &kp HOME  &kp PAGE_DOWN  &kp PG_UP  &kp END    &trans  &trans
-                      &trans        &trans     &trans          &trans    &trans    &trans         &trans     &trans
+&trans        &kp NUMBER_1            &kp NUMBER_2          &kp NUMBER_3              &kp NUMBER_4              &kp NUMBER_5       &kp NUMBER_6  &kp NUMBER_7               &kp NUMBER_8                &kp NUMBER_9         &kp NUMBER_0         &trans
+&trans        &HML LEFT_CONTROL HOME  &HML LEFT_ALT INSERT  &HML LEFT_COMMAND DELETE  &HMShiftL LEFT_SHIFT END  &trans             &kp LEFT      &HMShiftR LEFT_SHIFT DOWN  &HMR LEFT_COMMAND UP_ARROW  &HMR LEFT_ALT RIGHT  &HMR LEFT_CONTROL A  &trans
+&kp CAPSLOCK  &trans                  &trans                &trans                    &trans                    &kp PRINTSCREEN    &kp HOME      &kp PAGE_DOWN              &kp PG_UP                   &kp END              &trans               &trans
+                                      &trans                &trans                    &trans                    &trans             &trans        &trans                     &trans                      &trans
             >;
         };
 
